@@ -62,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void fetchMovies(String query) {
+        //Clear the previous list of movies
+        if (movieAdapter != null) {
+            movieAdapter.clearMovies();
+        }
+
         //Search movies based on the user's input
         String searchUrl = "https://www.omdbapi.com/?apikey=6b931edd&s=" + query + "&type=movie";
 

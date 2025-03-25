@@ -77,4 +77,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
             posterImageView = itemView.findViewById(R.id.posterImageView);
         }
     }
+
+    public void clearMovies() {
+        movieList.clear();
+        notifyDataSetChanged();
+    }
+
 }

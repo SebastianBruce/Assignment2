@@ -22,6 +22,10 @@ public class Movie {
 
     //Getters
     public String getTitle() {
+        //Truncate title if longer than 20 characters
+        if (Title.length() > 20) {
+            Title = Title.substring(0, 17) + "...";
+        }
         return Title;
     }
 
