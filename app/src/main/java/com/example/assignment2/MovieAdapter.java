@@ -39,16 +39,16 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     public void onBindViewHolder(MovieViewHolder holder, int position) {
         Movie movie = movieList.get(position);
 
-        // Set title & year
+        //Set title & year
         holder.titleTextView.setText(movie.getTitle());
         holder.yearTextView.setText(movie.getYear());
 
-        // Load movie poster using Glide
+        //Load movie poster using Glide
         Glide.with(holder.itemView.getContext())
                 .load(movie.getPoster())
                 .into(holder.posterImageView);
 
-        // Display rating and metascore
+        //Display rating and metascore
         holder.ratedTextView.setText("Rated: " + (movie.getRated() != null ? movie.getRated() : "N/A"));
         holder.ratingTextView.setText("Score: " + (movie.getMetascore() != null ? movie.getMetascore() : "0%"));
 
