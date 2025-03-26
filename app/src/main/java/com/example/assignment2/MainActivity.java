@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Bind ids to variables
+        //Bind views to variables
         searchEditText = findViewById(R.id.searchEditText);
         searchButton = findViewById(R.id.searchButton);
         searchRecyclerView = findViewById(R.id.searchRecyclerView);
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Initialize Retrofit
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://www.omdbapi.com/") //Base
+                .baseUrl("https://www.omdbapi.com/") //Base URL
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

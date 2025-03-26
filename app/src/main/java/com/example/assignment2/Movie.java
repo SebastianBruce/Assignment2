@@ -1,6 +1,8 @@
 package com.example.assignment2;
 
-public class Movie {
+import java.io.Serializable;
+
+public class Movie implements Serializable {
 
     //Variables matching the json info
     private String Title;
@@ -9,16 +11,13 @@ public class Movie {
     private String Poster;
     private String Rated;
     private String Metascore;
-
-    //Constructor for Movie
-    public Movie(String title, String year, String imdbID, String poster, String rating, String plot) {
-        this.Title = title;
-        this.Year = year;
-        this.imdbID = imdbID;
-        this.Poster = poster;
-        this.Rated = rating;
-        this.Metascore = plot;
-    }
+    private String Released;
+    private String Runtime;
+    private String Genre;
+    private String Director;
+    private String Writer;
+    private String Actors;
+    private String Plot;
 
     //Getters
     public String getTitle() {
@@ -47,5 +46,33 @@ public class Movie {
 
     public String getMetascore() {
         return Metascore + "%";
+    }
+
+    public String getReleased() {
+        return Released;
+    }
+
+    public String getRuntime() {
+        return Runtime;
+    }
+
+    public String getGenre() {
+        return Genre;
+    }
+
+    public String getDirector() {
+        return Director;
+    }
+
+    public String getWriter() {
+        return Writer;
+    }
+
+    public String getActors() {
+        return Actors;
+    }
+
+    public String getPlot() {
+        return Plot;
     }
 }
